@@ -27,7 +27,8 @@ function escogerPreguntaAleatoria() {
   let n;
   if (preguntas_aleatorias) {
     n = Math.floor(Math.random() * interprete_bp.length);
-  } else {
+  } 
+  else {
     n = 0;
   }
 
@@ -134,6 +135,10 @@ function reiniciar() {
   }
   escogerPreguntaAleatoria();
 }
+
+
+
+
 
 function select_id(id) {
   return document.getElementById(id);
