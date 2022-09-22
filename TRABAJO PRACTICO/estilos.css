@@ -1,0 +1,145 @@
+*{
+	box-sizing: border-box; 
+	font-family: arial;
+	margin: 0;
+	padding: 0;
+	font-weight: 600;
+	text-align: left;
+}
+
+body{
+	background-image: url(img/fondo.jpg);
+    width: 100%;
+	padding: 2em;
+	margin: auto;
+}
+
+#contenedor{
+	width:80%;
+	max-width: 1150px;
+	padding: 2em;
+	margin: 7em auto;
+	text-align: center;
+	background-color: #51C4C5;
+}
+
+nav{
+	width: 100%;
+	text-align: center;
+	padding-left: 11.5em;
+	margin: 0.5em;
+}
+
+nav ul{
+	list-style: none;
+	display: flex;
+	padding: 10px;
+}
+
+nav ul li a{
+	color:black;
+	background-color: #D8D8D8;
+	padding: 10px;
+	margin:10px;
+}
+
+nav ul li a:hover{
+	background-color: #F9C1B8;
+}
+
+p{
+	margin: 0.5em;
+}
+
+header{
+	margin:0 auto;
+	width: 100%;
+	background-color: #F9C1B8;
+	color: white;
+	padding: 20px;
+}
+
+header h2{
+	text-align: center;
+}
+
+article{
+	width:70%;
+	margin:0 auto;
+	background-color: #F9F9F9;
+	padding: 2em;
+}
+
+
+#consigna{
+    border: 0.4em solid;
+    border-color: #F9C1B8;
+    padding: 1.2em;
+    width: auto;
+    margin: 1em;
+}
+
+#consigna h2{
+	text-align: center;
+}
+
+#consigna2{
+    border: 0.4em solid;
+    border-color: #F9C1B8;
+    padding: 1.2em;
+    width: auto;
+    margin: 0.5em;
+}
+
+
+h1{
+	margin: 1em;
+	background-color: #D8D8D8;
+	color: white;
+	text-align: center;
+}
+
+h2{
+    padding: 1em;
+    text-decoration: underline;
+}
+
+h3{
+    padding: 1em;
+    text-decoration: underline;
+}
+
+ol{
+	margin: 0.1em;
+}
+
+footer{
+	background-color: #F9C1B8;
+	width: 100%;
+	font-size: 1.2em;
+	padding: 1em;
+	color: white;
+	}
+
+footer p{
+	text-align: center;
+}
+
+img {
+	padding: 0.5em;
+}
+
+/*ejercicio 1*/
+
+
+
+
+
+/*ejercicio 2*/
+
+
+
+
+
+/*ejercicio 3*/
+

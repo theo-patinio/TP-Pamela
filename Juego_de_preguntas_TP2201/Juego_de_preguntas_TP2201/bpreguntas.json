@@ -1,0 +1,147 @@
+[
+    {
+        "categoria": "Arte",
+        "pregunta": "¿Quién pintó el Grito?",
+        "respuesta": "Munch",
+        "incorrecta1": "Picasso",
+        "incorrecta2": "Leonardo da Vinci",
+        "incorrecta3": "Monet",
+        "imagen": "imagenes/munch_el_grito.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Se cortó una oreja",
+        "ayuda2": "El pintor era bizcou"
+    },
+    {
+        "categoria": "Arte",
+        "pregunta": "Fue el pintor de las bestias del aquel infierno?",
+        "respuesta": "Carlos Alonso",
+        "incorrecta1": "Velásquez",
+        "incorrecta2": "Marta Minujin",
+        "incorrecta3": "Martin Malharro",
+        "imagen": "imagenes/lasbestiasdeaquelinfierno.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Se cortó una oreja",
+        "ayuda2": "El pintor era bizcou"
+
+    },
+    {
+        "categoria": "Arte ",
+        "pregunta": "¿Quién pintó el Guernica?",
+        "respuesta": "Picasso",
+        "incorrecta1": "Rafael",
+        "incorrecta2": "Gioto",
+        "incorrecta3": "Cezanne",
+        "imagen": "imagenes/gernica.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Se cortó una oreja",
+        "ayuda2": "El pintor era bizcou"
+
+    },
+    {
+        "categoria": "Arte",
+        "pregunta": "¿Quién pintó La noche estrellada?",
+        "respuesta": "Vincent Van Gogh",
+        "incorrecta1": "Henri Matisse",
+        "incorrecta2": "Pablo Picasso",
+        "incorrecta3": "Edgar Degas",
+        "imagen": "imagenes/estrellada.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Se cortó una oreja",
+        "ayuda2": "El pintor era bizcou"
+
+    },
+    {
+        "categoria": "Arte",
+        "pregunta": "¿Quién pintó Las Meninas?",
+        "respuesta": "Diego Velázquez",
+        "incorrecta1": "Xul solar",
+        "incorrecta2": "Benito quinquela Martin",
+        "incorrecta3": "Emilio Pettoruti",
+        "imagen": "imagenes/lasmeninas.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Se cortó una oreja",
+        "ayuda2": "El pintor era bizcou"
+
+    },
+    {
+        "categoria": "Arte",
+        "pregunta": "¿Quién pintó El beso?",
+        "respuesta": "Gustav Klimt",
+        "incorrecta1": "Peter Paul Rubens",
+        "incorrecta2": "Edouard Manet",
+        "incorrecta3": "Claude Monet",
+        "imagen": "imagenes/elbeso.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Se cortó una oreja",
+        "ayuda2": "El pintor era bizcou"
+
+    },
+    {
+        "categoria": "Arte",
+        "pregunta": "La Gioconda",
+        "respuesta": "Leonardo Da Vinci",
+        "incorrecta1": "Jan van Eyck",
+        "incorrecta2": "Michelangelo Merisi da Caravaggio",
+        "incorrecta3": "Rembrandt",
+        "imagen": "imagenes/lagioconda.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Se cortó una oreja",
+        "ayuda2": "El pintor era bizcou"
+
+    },
+    {
+        "categoria": "Arte ",
+        "pregunta": "¿a quien pertenece la obra el partenon de los libros ?",
+        "respuesta": "Marta Minujin",
+        "incorrecta1": "Sophie calle",
+        "incorrecta2": "María Obligado de Soto y Calvo",
+        "incorrecta3": "Raquel Forner",
+        "imagen": "imagenes/elpartenon.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Se cortó una oreja",
+        "ayuda2": "El pintor era bizcou"
+
+    },
+    {
+        "categoria": "Arte",
+        "pregunta": "¿a quien pertenece la obra Cerrado por brujeria?",
+        "respuesta": "Luis Felipe Noe",
+        "incorrecta1": "Emilia Bertolé",
+        "incorrecta2": "Leon Ferrari",
+        "incorrecta3": "Antonio Berni",
+        "imagen": "imagenes/cerradoporbrujeria.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Se cortó una oreja",
+        "ayuda2": "El pintor era bizcou"
+
+    },
+    {
+        "categoria": "Arte",
+        "pregunta": "Juanito Laguna, es una obra de",
+        "respuesta": "Antonio Berni",
+        "incorrecta1": "Julio Le parc",
+        "incorrecta2": "Emilio Petorutti",
+        "incorrecta3": "Eduardo Schiafino",
+        "imagen": "imagenes/juanito.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Se cortó una oreja",
+        "ayuda2": "El pintor era bizcou"
+
+    },
+    {
+        "categoria": "Arte",
+        "pregunta": "La obra sin titulo, perteneciente al movimiento MADI pertenece a",
+        "respuesta": "Carmelo Arden Quin",
+        "incorrecta1": "Rhod Rothfuss",
+        "incorrecta2": "Gyula Kosice",
+        "incorrecta3": "Jesús Rafael Soto",
+        "imagen": "imagenes/sintitulo.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Se cortó una oreja",
+        "ayuda2": "El pintor era bizcou"
+
+    }
+   
+   
+    
+]
