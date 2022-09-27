@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+      }
 
   .encabezado {
     position: relative;
@@ -68,6 +68,12 @@
   }
   
   .puntaje{
-    padding:10px;
+    padding:6px;
     color:white;
+  }
+  .container{
+    margin-bottom: 50px;
+  }
+  #boton_pedir_ayuda1{
+    display: block;
   }

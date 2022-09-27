@@ -43,7 +43,12 @@ function escogerPreguntaAleatoria() {
         swal.fire({
           title: "Juego finalizado",
           text:
-            "Puntuación: " + preguntas_correctas + "/" + (preguntas_hechas - 1),
+            "Puntuación: " + preguntas_correctas + " Puntos. "+
+          
+            "Pediste ayuda "+ cantidad_ayuda + " veces. " +
+          
+            "Tenes "+ (5-cantidad_ayuda)+ " oportunidades de duplicar tu puntaje",
+
           icon: "success"
         });
       }
@@ -60,31 +65,60 @@ function escogerPreguntaAleatoria() {
   escogerPregunta(n);
 }
 
+
+puntos = 10;
+cantidad_ayuda = 0;
+let boton6 = document.getElementById("boton_pedir_ayuda2");
+let boton5 = document.getElementById("boton_pedir_ayuda1");
+boton6.addEventListener("click", valor_puntos2) 
+boton5.addEventListener("click", valor_puntos1) 
+
+
+function valor_puntos1(){
+  puntos = 8
+  if (cantidad_ayuda < 4) {
+    cantidad_ayuda++
+    console.log (cantidad_ayuda)
+  }  
+  else{
+    boton5.style.display="none";
+  }
+};
+
+function valor_puntos2(){
+puntos = 3
+if (cantidad_ayuda < 4) {
+  cantidad_ayuda++
+  console.log (cantidad_ayuda)
+}  
+else{
+  boton5.style.display="none";
+}
+};
+
+
 function escogerPregunta(n) {
   pregunta = interprete_bp[n];
   select_id("categoria").innerHTML = pregunta.categoria;
   select_id("pregunta").innerHTML = pregunta.pregunta;
   select_id("numero").innerHTML = n;
+  select_id("ayuda1").innerHTML = pregunta.ayuda1
+  select_id("ayuda2").innerHTML = pregunta.ayuda2
+
   let pc = preguntas_correctas;
-  if (preguntas_hechas > 1) {
-    select_id("puntaje").innerHTML = "Puntos acumulados: "+pc*10 + "</br>" + "Preguntas respondidas: "+(preguntas_hechas - 1);
+
+  if (preguntas_hechas > 0 ) {
+    select_id("puntaje").innerHTML = "Puntos acumulados: "+ pc + "</br>" + "Preguntas respondidas: "+(preguntas_hechas - 1);
   } else {
     select_id("puntaje").innerHTML = "Puntos acumulados: 0"+ "</br>" + "Preguntas respondidas: 0";
   }
 
   style("imagen").objectFit = pregunta.objectFit;
   desordenarRespuestas(pregunta);
-  if (pregunta.imagen) {
-    select_id("imagen").setAttribute("src", pregunta.imagen);
-    style("imagen").height = "200px";
-    style("imagen").width = "100%";
-  } else {
-    style("imagen").height = "0px";
-    style("imagen").width = "0px";
-    setTimeout(() => {
-      select_id("imagen").setAttribute("src", "");
-    }, 500);
-  }
+  select_id("imagen").setAttribute("src", pregunta.imagen);
+  style("imagen").height = "200px";
+  style("imagen").width = "100%";
+
 }
 
 function desordenarRespuestas(pregunta) {
@@ -110,7 +144,8 @@ function oprimir_btn(i) {
   }
   suspender_botones = true;
   if (posibles_respuestas[i] == pregunta.respuesta) {
-    preguntas_correctas++;
+    preguntas_correctas= (preguntas_correctas+puntos);
+    puntos=10;
     btn_correspondiente[i].style.background = "lightgreen";
   } else {
     btn_correspondiente[i].style.background = "pink";
@@ -124,7 +159,7 @@ function oprimir_btn(i) {
   setTimeout(() => {
     reiniciar();
     suspender_botones = false;
-  }, 1000);
+  }, 200);
 }
 
 // let p = prompt("numero")
