@@ -1,5 +1,5 @@
 let preguntas_aleatorias = true;
-//let mostrar_pantalla_juego_términado = true;
+let mostrar_pantalla_juego_términado = true;
 let reiniciar_puntos_al_reiniciar_el_juego = true;
 
 //tengo 10 preguntas en un json//
@@ -23,15 +23,17 @@ let preguntas_hechas = 0;
 let preguntas_correctas = 0;
 let num =0;
 
+
 let suerte= document.getElementById("tirar_dado")
-      suerte.addEventListener("click", tirar_dados)
-      function tirar_dados(){
-        num= Math.floor(Math.random()*9);
-        preguntas_correctas= preguntas_correctas*num;
-        console.log(num);
-        select_id("resultado_dado").innerHTML="hasta acá tenes "+ (preguntas_correctas ) +  " puntos";
-        select_id("dado").innerHTML=num;
-      }
+suerte.addEventListener("click", tirar_dados)
+
+function tirar_dados(){
+    num= Math.floor(Math.random()*9);
+    preguntas_correctas= preguntas_correctas*num;
+    console.log(num);
+    select_id("resultado_dado").innerHTML="hasta acá tenes "+ (preguntas_correctas ) +  " puntos";
+    select_id("dado").innerHTML=num;
+}
 
 
 function escogerPreguntaAleatoria() {
@@ -42,43 +44,42 @@ function escogerPreguntaAleatoria() {
   else {
     n = 0;
   }
-
-
   while (npreguntas.includes(n)) {
     n++;
     if (n >= interprete_bp.length) {
       n = 0;
     }
-    if (npreguntas.length == 10 && cantidad_ayuda<=5) {
-      document.getElementById("juego_dados").style.display="block";
-      select_id("explicado").innerHTML="hasta acá tenes "+preguntas_correctas+ " puntos" ;
-      select_id("explicado2").innerHTML="Pediste ayuda "+ cantidad_ayuda + " veces. ";
-      select_id("explicado3").innerHTML="Tenes "+ (5-cantidad_ayuda)+ " oportunidades de duplicar tu puntaje";
+    if (npreguntas.length == 10 ) {
+      if (cantidad_ayuda<=4) {
+        console.log(cantidad_ayuda);
+        document.getElementById("juego_dados").style.display="block";
+        select_id("explicado").innerHTML="hasta acá tenes "+preguntas_correctas+ " puntos" ;
+        select_id("explicado2").innerHTML="Pediste ayuda "+ cantidad_ayuda + " veces. ";
+        select_id("explicado3").innerHTML="Tenes "+ (5-cantidad_ayuda)+ " oportunidades de duplicar tu puntaje";
+        
+      }
 
-
-      
-      
+      else {
+       if (mostrar_pantalla_juego_términado) { 
+           swal.fire({
+             title: "Juego finalizado",
+             text:
+               "Puntuación: " + preguntas_correctas + " Puntos. ",
+             icon: "success", 
+           });
+         }
+         if (reiniciar_puntos_al_reiniciar_el_juego) {
+           preguntas_correctas = 0
+           preguntas_hechas = 0
+          }
+          npreguntas = [];
+        } 
     }
     
       
       //Aquí es donde el juego se reinicia
 
 
-   if (npreguntas.length == 10 && cantidad_ayuda>5) {
-    if (mostrar_pantalla_juego_términado) { 
-        swal.fire({
-          title: "Juego finalizado",
-          text:
-            "Puntuación: " + preguntas_correctas + " Puntos. ",
-          icon: "success", 
-        });
-      }
-      if (reiniciar_puntos_al_reiniciar_el_juego) {
-        preguntas_correctas = 0
-        preguntas_hechas = 0
-      }
-      npreguntas = [];
-    } 
 
 
   }
@@ -101,8 +102,7 @@ function valor_puntos1(){
   puntos = 8
   if (cantidad_ayuda < 5) {
     cantidad_ayuda++
-    console.log (cantidad_ayuda)
-  }  
+    }  
   else{
     boton5.style.display="none";
   }
@@ -112,8 +112,7 @@ function valor_puntos2(){
 puntos = 3
 if (cantidad_ayuda < 5) {
   cantidad_ayuda++
-  console.log (cantidad_ayuda)
-}  
+ }  
 else{
   boton5.style.display="none";
 }
