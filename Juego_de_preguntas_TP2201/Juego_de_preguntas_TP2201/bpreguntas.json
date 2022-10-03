@@ -140,8 +140,20 @@
         "ayuda1":"Se cortó una oreja",
         "ayuda2": "El pintor era bizcou"
 
+    },
+    {
+        "categoria": "Arte",
+        "pregunta": "La obra Alfonsina, pertenece a",
+        "respuesta": "Valeria Daguerre",
+        "incorrecta1": "Rhod Rothfuss",
+        "incorrecta2": "Gyula Kosice",
+        "incorrecta3": "Jesús Rafael Soto",
+        "imagen": "imagenes/Alfonsina.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"Su esposo es el famoso artista y programador Theo Patinio",
+        "ayuda2": "Es una de las mujeres mas creativas y hermosa de Argentina"
+
     }
-   
    
     
 ]
