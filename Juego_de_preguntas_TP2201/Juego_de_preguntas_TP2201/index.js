@@ -27,13 +27,22 @@ let num =0;
 let suerte= document.getElementById("tirar_dado")
 suerte.addEventListener("click", tirar_dados)
 
+
 function tirar_dados(){
-    num= Math.floor(Math.random()*9);
-    preguntas_correctas= preguntas_correctas*num;
-    console.log(num);
-    select_id("resultado_dado").innerHTML="hasta acá tenes "+ (preguntas_correctas ) +  " puntos";
-    select_id("dado").innerHTML=num;
+  if (pepe>0) {
+	    num= Math.floor(Math.random()*9);
+	    preguntas_correctas= preguntas_correctas*num;
+	    console.log(num);
+	    select_id("resultado_dado").innerHTML="hasta acá tenes "+ (preguntas_correctas ) +  " puntos";
+	    select_id("dado").innerHTML=num;
+    }
+    pepe=pepe-1;
 }
+
+
+ 
+    
+
 
 
 function escogerPreguntaAleatoria() {
@@ -96,7 +105,7 @@ let boton6 = document.getElementById("boton_pedir_ayuda2");
 let boton5 = document.getElementById("boton_pedir_ayuda1");
 boton6.addEventListener("click", valor_puntos2) 
 boton5.addEventListener("click", valor_puntos1) 
-
+let pepe=(5-cantidad_ayuda);
 
 function valor_puntos1(){
   puntos = 8
