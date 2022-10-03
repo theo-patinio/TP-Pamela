@@ -27,23 +27,34 @@ let num =0;
 let suerte= document.getElementById("tirar_dado")
 suerte.addEventListener("click", tirar_dados)
 
-
 function tirar_dados(){
   if (pepe>0) {
-	    num= Math.floor(Math.random()*9);
-	    preguntas_correctas= preguntas_correctas*num;
-	    console.log(num);
-	    select_id("resultado_dado").innerHTML="hasta acá tenes "+ (preguntas_correctas ) +  " puntos";
-	    select_id("dado").innerHTML=num;
+      num= Math.floor(Math.random()*9);
+      preguntas_correctas= preguntas_correctas*num;
+      console.log(num);
+      select_id("resultado_dado").innerHTML="hasta acá tenes "+ (preguntas_correctas ) +  " puntos";
+      select_id("dado").innerHTML=num;
     }
     pepe=pepe-1;
-}
+    }
+  
+let fin_juego=document.getElementById("final");
+fin_juego.addEventListener("click", juego_terminado)    
 
-
+function juego_terminado() {
  
-    
-
-
+    if (mostrar_pantalla_juego_términado) { 
+        swal.fire({
+          title: "Juego finalizado",
+          text:
+            "Puntuación: " + preguntas_correctas + " Puntos. ",
+          icon: "success", 
+        });
+      }
+    }
+      
+  
+  
 
 function escogerPreguntaAleatoria() {
   let n;
@@ -60,6 +71,7 @@ function escogerPreguntaAleatoria() {
     }
     if (npreguntas.length == 10 ) {
       if (cantidad_ayuda<=4) {
+        
         console.log(cantidad_ayuda);
         document.getElementById("juego_dados").style.display="block";
         select_id("explicado").innerHTML="hasta acá tenes "+preguntas_correctas+ " puntos" ;
@@ -67,7 +79,6 @@ function escogerPreguntaAleatoria() {
         select_id("explicado3").innerHTML="Tenes "+ (5-cantidad_ayuda)+ " oportunidades de duplicar tu puntaje";
         
       }
-
       else {
        if (mostrar_pantalla_juego_términado) { 
            swal.fire({
@@ -84,33 +95,30 @@ function escogerPreguntaAleatoria() {
           npreguntas = [];
         } 
     }
-    
-      
       //Aquí es donde el juego se reinicia
-
-
-
-
+    }
+    npreguntas.push(n);
+    preguntas_hechas++;
+    
+    escogerPregunta(n);
   }
-  npreguntas.push(n);
-  preguntas_hechas++;
+  
 
-  escogerPregunta(n);
-}
 
 
 puntos = 10;
-cantidad_ayuda = 0;
+let cantidad_ayuda = 0;
 let boton6 = document.getElementById("boton_pedir_ayuda2");
 let boton5 = document.getElementById("boton_pedir_ayuda1");
 boton6.addEventListener("click", valor_puntos2) 
 boton5.addEventListener("click", valor_puntos1) 
-let pepe=(5-cantidad_ayuda);
+var pepe=5;
 
 function valor_puntos1(){
   puntos = 8
   if (cantidad_ayuda < 5) {
     cantidad_ayuda++
+    pepe--
     }  
   else{
     boton5.style.display="none";
@@ -121,6 +129,7 @@ function valor_puntos2(){
 puntos = 3
 if (cantidad_ayuda < 5) {
   cantidad_ayuda++
+  pepe--
  }  
 else{
   boton5.style.display="none";
