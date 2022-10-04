@@ -21,7 +21,7 @@ btn_correspondiente = [
 let npreguntas = [];
 let preguntas_hechas = 0;
 let preguntas_correctas = 0;
-let num =0;
+let valor_dado =0;
 
 
 let suerte= document.getElementById("tirar_dado")
@@ -29,11 +29,14 @@ suerte.addEventListener("click", tirar_dados)
 
 function tirar_dados(){
   if (pepe>0) {
-      num= Math.floor(Math.random()*9);
-      preguntas_correctas= preguntas_correctas*num;
-      console.log(num);
+      valor_dado= Math.floor(Math.random()*9);
+      preguntas_correctas= preguntas_correctas*valor_dado;
+      console.log(valor_dado);
       select_id("resultado_dado").innerHTML="hasta acá tenes "+ (preguntas_correctas ) +  " puntos";
-      select_id("dado").innerHTML=num;
+      select_id("dado").innerHTML=valor_dado;
+    }
+    else{
+      select_id("tirar_dado").innerHTML="Ya no podes tirar el dado "
     }
     pepe=pepe-1;
     }
@@ -57,6 +60,7 @@ function juego_terminado() {
   
 
 function escogerPreguntaAleatoria() {
+
   let n;
   if (preguntas_aleatorias) {
     n = Math.floor(Math.random() * interprete_bp.length);
@@ -64,18 +68,27 @@ function escogerPreguntaAleatoria() {
   else {
     n = 0;
   }
+  console.log("while", n, npreguntas.includes(n), npreguntas )
+
   while (npreguntas.includes(n)) {
     n++;
     if (n >= interprete_bp.length) {
       n = 0;
     }
-    if (npreguntas.length == 10 ) {
+    
+    console.log("npreguntas.length", npreguntas.length )
+    if (npreguntas.length >= 10 ) {
       if (cantidad_ayuda<=4) {
         
         console.log(cantidad_ayuda);
         document.getElementById("juego_dados").style.display="block";
         select_id("explicado").innerHTML="hasta acá tenes "+preguntas_correctas+ " puntos" ;
-        select_id("explicado2").innerHTML="Pediste ayuda "+ cantidad_ayuda + " veces. ";
+        if (cantidad_ayuda==1) {
+          select_id("explicado2").innerHTML="Pediste ayuda "+ cantidad_ayuda + " vez. ";
+        }
+        else{
+          select_id("explicado2").innerHTML="Pediste ayuda "+ cantidad_ayuda + " veces. ";
+        }
         select_id("explicado3").innerHTML="Tenes "+ (5-cantidad_ayuda)+ " oportunidades de duplicar tu puntaje";
         
       }
