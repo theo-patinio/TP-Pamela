@@ -168,7 +168,31 @@
         "objectFit": "scale-down",
         "ayuda1":"esta es la ayuda 1",
         "ayuda2": "esta es la ayuda 2"
+    },
+    {
+        "categoria": "Arte y literatura",
+        "pregunta": "Autor de \"Moby Dick\"",
+        "respuesta": "Herman Melville",
+        "incorrecta1": "Ernesto Sábato",
+        "incorrecta2": "Ernest Hemingway",
+        "incorrecta3": "Julio Verne\r",
+        "imagen": "https://i.ibb.co/gVQXD5q/mobi.jpg",
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
+    },
+    {
+        "categoria": "Arte y literatura",
+        "pregunta": "protagonista de \"El código Da Vinci\" de Dan Brown",
+        "respuesta": "Robert Langdom",
+        "incorrecta1": "Sherlock Holmes",
+        "incorrecta2": "Katniss Everdeen",
+        "incorrecta3": "Hermione Jean Granger\r",
+        "imagen": "https://i.ibb.co/hDzmpKG/code-da-vinci.jpg",
+        "objectFit": "contain",
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
     }
+    
    
     
 ]
