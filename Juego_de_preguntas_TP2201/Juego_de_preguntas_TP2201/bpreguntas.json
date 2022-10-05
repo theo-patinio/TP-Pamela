@@ -20,8 +20,8 @@
         "incorrecta3": "Martin Malharro",
         "imagen": "imagenes/lasbestiasdeaquelinfierno.jpg",
         "objectFit": "scale-down",
-        "ayuda1":"Se cortó una oreja",
-        "ayuda2": "El pintor era bizcou"
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
 
     },
     {
@@ -33,8 +33,8 @@
         "incorrecta3": "Cezanne",
         "imagen": "imagenes/gernica.jpg",
         "objectFit": "scale-down",
-        "ayuda1":"Se cortó una oreja",
-        "ayuda2": "El pintor era bizcou"
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
 
     },
     {
@@ -46,9 +46,8 @@
         "incorrecta3": "Edgar Degas",
         "imagen": "imagenes/estrellada.jpg",
         "objectFit": "scale-down",
-        "ayuda1":"Se cortó una oreja",
-        "ayuda2": "El pintor era bizcou"
-
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
     },
     {
         "categoria": "Arte",
@@ -59,9 +58,8 @@
         "incorrecta3": "Emilio Pettoruti",
         "imagen": "imagenes/lasmeninas.jpg",
         "objectFit": "scale-down",
-        "ayuda1":"Se cortó una oreja",
-        "ayuda2": "El pintor era bizcou"
-
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
     },
     {
         "categoria": "Arte",
@@ -72,9 +70,8 @@
         "incorrecta3": "Claude Monet",
         "imagen": "imagenes/elbeso.jpg",
         "objectFit": "scale-down",
-        "ayuda1":"Se cortó una oreja",
-        "ayuda2": "El pintor era bizcou"
-
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
     },
     {
         "categoria": "Arte",
@@ -85,9 +82,8 @@
         "incorrecta3": "Rembrandt",
         "imagen": "imagenes/lagioconda.jpg",
         "objectFit": "scale-down",
-        "ayuda1":"Se cortó una oreja",
-        "ayuda2": "El pintor era bizcou"
-
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
     },
     {
         "categoria": "Arte ",
@@ -98,9 +94,8 @@
         "incorrecta3": "Raquel Forner",
         "imagen": "imagenes/elpartenon.jpg",
         "objectFit": "scale-down",
-        "ayuda1":"Se cortó una oreja",
-        "ayuda2": "El pintor era bizcou"
-
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
     },
     {
         "categoria": "Arte",
@@ -111,9 +106,8 @@
         "incorrecta3": "Antonio Berni",
         "imagen": "imagenes/cerradoporbrujeria.jpg",
         "objectFit": "scale-down",
-        "ayuda1":"Se cortó una oreja",
-        "ayuda2": "El pintor era bizcou"
-
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
     },
     {
         "categoria": "Arte",
@@ -124,9 +118,8 @@
         "incorrecta3": "Eduardo Schiafino",
         "imagen": "imagenes/juanito.jpg",
         "objectFit": "scale-down",
-        "ayuda1":"Se cortó una oreja",
-        "ayuda2": "El pintor era bizcou"
-
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
     },
     {
         "categoria": "Arte",
@@ -137,9 +130,8 @@
         "incorrecta3": "Jesús Rafael Soto",
         "imagen": "imagenes/sintitulo.jpg",
         "objectFit": "scale-down",
-        "ayuda1":"Se cortó una oreja",
-        "ayuda2": "El pintor era bizcou"
-
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
     },
     {
         "categoria": "Arte",
@@ -152,7 +144,30 @@
         "objectFit": "scale-down",
         "ayuda1":"Su esposo es el famoso artista y programador Theo Patinio",
         "ayuda2": "Es una de las mujeres mas creativa y hermosa de Argentina"
-
+    },
+    {
+        "categoria": "Arte",
+        "pregunta": "otra obra 1",
+        "respuesta": "Artista 1",
+        "incorrecta1": "Rhod Rothfuss",
+        "incorrecta2": "Gyula Kosice",
+        "incorrecta3": "Jesús Rafael Soto",
+        "imagen": "imagenes/Alfonsina.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
+    },
+    {
+        "categoria": "Arte",
+        "pregunta": "otra obra 2",
+        "respuesta": "Artista 2",
+        "incorrecta1": "Rhod Rothfuss",
+        "incorrecta2": "Gyula Kosice",
+        "incorrecta3": "Jesús Rafael Soto",
+        "imagen": "imagenes/Alfonsina.jpg",
+        "objectFit": "scale-down",
+        "ayuda1":"esta es la ayuda 1",
+        "ayuda2": "esta es la ayuda 2"
     }
    
     

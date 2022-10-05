@@ -105,3 +105,6 @@
   position: absolute;
   z-index: 1;
 }
+.juego_dados a{
+  color: azure;
+}

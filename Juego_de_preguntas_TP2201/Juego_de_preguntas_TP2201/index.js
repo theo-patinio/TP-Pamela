@@ -31,7 +31,6 @@ function tirar_dados(){
   if (pepe>0) {
       valor_dado= Math.floor(Math.random()*9);
       preguntas_correctas= preguntas_correctas*valor_dado;
-      console.log(valor_dado);
       select_id("resultado_dado").innerHTML="hasta acá tenes "+ (preguntas_correctas ) +  " puntos";
       select_id("dado").innerHTML=valor_dado;
     }
@@ -47,12 +46,12 @@ fin_juego.addEventListener("click", juego_terminado)
 function juego_terminado() {
  
     if (mostrar_pantalla_juego_términado) { 
-        swal.fire({
-          title: "Juego finalizado",
-          text:
-            "Puntuación: " + preguntas_correctas + " Puntos. ",
-          icon: "success", 
-        });
+      swal.fire({
+        icon: "success",
+        title: "Juego finalizado",
+        text: "Puntuación: " + preguntas_correctas + " Puntos. ",
+        footer: '<a href=".">Empecemos de nuevo</a>'
+      })
       }
     }
       
@@ -68,15 +67,15 @@ function escogerPreguntaAleatoria() {
   else {
     n = 0;
   }
-  console.log("while", n, npreguntas.includes(n), npreguntas )
+  console.log("while", npreguntas.includes(n), npreguntas, npreguntas.length )
 
   while (npreguntas.includes(n)) {
     n++;
+    console.log("n", n)
     if (n >= interprete_bp.length) {
       n = 0;
-    }
+    } 
     
-    console.log("npreguntas.length", npreguntas.length )
     if (npreguntas.length >= 10 ) {
       if (cantidad_ayuda<=4) {
         
@@ -94,12 +93,13 @@ function escogerPreguntaAleatoria() {
       }
       else {
        if (mostrar_pantalla_juego_términado) { 
-           swal.fire({
-             title: "Juego finalizado",
-             text:
-               "Puntuación: " + preguntas_correctas + " Puntos. ",
-             icon: "success", 
-           });
+        swal.fire({
+          icon: "success",
+          title: "Juego finalizado",
+          text: "Puntuación: " + preguntas_correctas + " Puntos. ",
+          footer: '<a href=".">Empecemos de nuevo</a>'
+        })
+
          }
          if (reiniciar_puntos_al_reiniciar_el_juego) {
            preguntas_correctas = 0
@@ -162,7 +162,8 @@ function escogerPregunta(n) {
 
   if (preguntas_hechas > 0 ) {
     select_id("puntaje").innerHTML = "Puntos acumulados: "+ pc + "</br>" + "Preguntas respondidas: "+(preguntas_hechas - 1);
-  } else {
+  } 
+  else {
     select_id("puntaje").innerHTML = "Puntos acumulados: 0"+ "</br>" + "Preguntas respondidas: 0";
   }
 
@@ -202,6 +203,7 @@ function oprimir_btn(i) {
     btn_correspondiente[i].style.background = "lightgreen";
   } else {
     btn_correspondiente[i].style.background = "pink";
+    puntos=10;
   }
   for (let j = 0; j < 4; j++) {
     if (posibles_respuestas[j] == pregunta.respuesta) {
